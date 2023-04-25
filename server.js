@@ -1,6 +1,7 @@
 // Dependencies
 const express = require('express');
 const logger = require('morgan');
+const indexRoutes = require('./routes/index');
 
 // Initialize Express App
 const app = express();
@@ -18,7 +19,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 // Mounted Routes
-// app.use('/', indexRoutes);
+app.use('/', indexRoutes);
 
 // Configure Port 3000
 app.listen(3000, () => {
