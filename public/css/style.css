@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+}
+nav > a {
+    margin-right: 1rem;
+}
+footer {
+    margin-top: auto;
+    text-align: center;
+}

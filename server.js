@@ -21,7 +21,11 @@ app.use(express.urlencoded({ extended: false }));
 // Mounted Routes
 app.use('/', indexRoutes);
 
-// Configure Port 3000
+// tell the application to listen for requests
 app.listen(3000, () => {
-    console.log('Express is listening on Port:3000')
+    console.log('express is listening on port:3000');
 });
+
+// app.use('*', (req, res) => {
+//     res.render('404', {title: '404 - Page Not Found'});
+// });
