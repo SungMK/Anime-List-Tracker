@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head') %>
+<body>
+    <%- include ('../partials/header') %>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Studio</th>
+                <th>Current Episode</th>
+                <th>Current Season</th>
+                <th>Release Year</th>
+                <th>Completion Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% animes.forEach(a => { %>  
+                <tr>
+                    <td><%= a.title %></td>
+                    <td><%= a.studio %></td>
+                    <td><%= a.currentEpisode %></td>
+                    <td><%= a.currentSeason%></td>
+                    <td><%= a.releaseYear%></td>
+                    <td><%= a.completionStatus%></td>
+                    <td>
+                        <a href="/animes/<%= a.id %>">Details</a>
+                    </td>
+                </tr>
+            <% }) %>        
+        </tbody>
+    </table>    
+    <%- include ('../partials/footer') %>
+</body>
+</html>
