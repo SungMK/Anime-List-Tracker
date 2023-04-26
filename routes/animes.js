@@ -14,4 +14,7 @@ router.post('/', animesController.create);
 // GET /Animes/:id - Show Route
 router.get('/:id', animesController.show);
 
+// DELETE /Animes
+router.delete('/:id', animesController.delete);
+
 module.exports = router;
