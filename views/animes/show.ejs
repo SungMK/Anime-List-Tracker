@@ -31,22 +31,22 @@
     <br>
     <section>
         <h2>My Notes</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Thoughts</th>
-                    <th>Rating</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% anime.notes.forEach(n => { %>
+            <table>
+                <thead>
                     <tr>
-                        <td><%= n.content %></td>
-                        <td><%= n.rating %></td>
+                        <th id="thoughts-header">Thoughts</th>
+                        <th id="rating-header">Rating</th>
                     </tr>
-                <% }) %>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <% anime.notes.forEach(n => { %>
+                        <tr>
+                            <td id="notes-content"><%= n.content %></td>
+                            <td id="notes-rating"><%= n.rating %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
     </section>
     <section>
         <form action="/animes/<%= anime._id %>/notes" method="POST">

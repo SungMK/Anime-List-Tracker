@@ -11,10 +11,44 @@ nav {
     justify-content: flex-end;
     margin-right: 1rem;
 }
+
 nav > a {
     margin-right: 1rem;
 }
+
 footer {
     margin-top: auto;
     text-align: center;
+}
+
+.delete-button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.delete-button-content {
+}
+
+.delete-button-rating {
+}
+
+#thoughts-header {
+    color: red;
+}
+
+#rating-header {
+    color: purple;
+}
+
+#notes-content {
+    color: blue;
+}
+
+#notes-rating {
+    color: orangered;
+    text-align: center;
+}
+
+.delete-button {
+    color: red;
 }

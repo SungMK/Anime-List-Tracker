@@ -9,7 +9,6 @@ function newAnime(req, res) {
 async function index(req, res) {
     try {
         const allAnimes = await Anime.find({});
-        console.log('Check');
         res.render('animes/index', {
             animes: allAnimes,
             title: 'All Animes',
@@ -44,9 +43,20 @@ async function show(req, res) {
     }
 }
 
+async function deleteAnime (req, res) {
+    try {
+        await Anime.findByIdAndRemove(req.params.id);
+        res.redirect('/animes')
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Something went wrong'}); 
+    }
+} 
+
 module.exports = { 
     new: newAnime,
     index,
     create,
     show,
+    delete: deleteAnime,
 }
