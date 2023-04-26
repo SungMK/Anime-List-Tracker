@@ -4,6 +4,7 @@ const logger = require('morgan');
 const indexRoutes = require('./routes/index');
 const animeRoutes = require('./routes/animes');
 const noteRoutes = require('./routes/notes');
+const methodOverride = require('method-override');
 
 // Initialize Express App
 const app = express();
@@ -21,6 +22,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 // Mounted Routes
 app.use('/', indexRoutes);
