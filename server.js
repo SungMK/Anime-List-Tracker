@@ -3,6 +3,7 @@ const express = require('express');
 const logger = require('morgan');
 const indexRoutes = require('./routes/index');
 const animeRoutes = require('./routes/animes');
+const path = require('path')
 
 // Initialize Express App
 const app = express();
@@ -13,6 +14,9 @@ require ('./config/database');
 
 // Configure App Settings 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// console.log(`Views directory: ${app.get('views')}`); // Add this line to log the views directory path
 
 // Middleware 
 app.use(logger('dev'));
