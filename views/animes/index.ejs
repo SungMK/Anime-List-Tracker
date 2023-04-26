@@ -19,6 +19,11 @@
                         <a href="/animes/<%= a.id %>">DETAILS</a>
                     </td>
                     <td> 
+                        <form method="POST" action="/animes/<%= a._id %>?_method=PUT" class="update-button-content">
+                            <button class="update-button" type="submit">EDIT</button>
+                        </form>
+                    </td>
+                    <td> 
                         <form method="POST" action="/animes/<%= a._id %>?_method=DELETE" class="delete-button-content">
                             <button class="delete-button" type="submit">DELETE</button>
                         </form>
