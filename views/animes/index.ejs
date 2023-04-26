@@ -6,11 +6,7 @@
     <table>
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Studio</th>
-                <th>Current Episode</th>
-                <th>Current Season</th>
-                <th>Release Year</th>
+                <th>Name</th>
                 <th>Completion Status</th>
             </tr>
         </thead>
@@ -18,13 +14,14 @@
             <% animes.forEach(a => { %>  
                 <tr>
                     <td><%= a.title %></td>
-                    <td><%= a.studio %></td>
-                    <td><%= a.currentEpisode %></td>
-                    <td><%= a.currentSeason%></td>
-                    <td><%= a.releaseYear%></td>
-                    <td><%= a.completionStatus%></td>
+                    <td><%= a.completionStatus %></td>
                     <td>
-                        <a href="/animes/<%= a.id %>">Details</a>
+                        <a href="/animes/<%= a.id %>">DETAILS</a>
+                    </td>
+                    <td> 
+                        <form method="POST" action="/animes/<%= a._id %>?_method=DELETE" class="delete-button-content">
+                            <button class="delete-button" type="submit">DELETE</button>
+                        </form>
                     </td>
                 </tr>
             <% }) %>        

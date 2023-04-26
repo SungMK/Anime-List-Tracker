@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body> 
+    <%- include('../partials/header') %>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Studio</th>
+                    <th>Current Episode</th>
+                    <th>Current Season</th>
+                    <th>Release Year</th>
+                    <th>Completion Status</th> 
+                </tr>
+            </thead>
+                <tbody>
+                    <% anime %>
+                        <tr>
+                            <td><%= anime.title %></td>
+                            <td><%= anime.studio %></td>
+                            <td><%= anime.currentEpisode %></td>
+                            <td><%= anime.currentSeason %></td>
+                            <td><%= anime.releaseYear %></td>
+                            <td><%= anime.completionStatus %></td>
+                        </tr>
+                </tbody> 
+        </table>
+    </section>
+    <br>
+    <section>
+        <h2>My Notes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="thoughts-header">Thoughts</th>
+                        <th id="rating-header">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% anime.notes.forEach(n => { %>
+                        <tr>
+                            <td id="notes-content"><%= n.content %></td>
+                            <td id="notes-rating"><%= n.rating %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+    </section>
+    <section>
+        <form action="/animes/<%= anime._id %>/notes" method="POST">
+            <label>Notes:
+                <textarea name="content" rows="2"></textarea>
+            </label><br>
+            <br>
+            <label>Rating:
+                <select name="rating">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </label><br>
+            <br>
+            <input type="submit" value="Add Note">
+        </form>
+    </section>
+    <%- include('../partials/footer') %>
+</body>
+</html>
