@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const commentSchema = new Schema({
+const noteSchema = new Schema({
     content: {
       type: String,
       required: true
@@ -22,7 +22,8 @@ const animeSchema = new Schema({
     },
     studio: {
         type: String,
-        enum: ['Ghibli', 'Madhouse', 'Bones', 'TOEI', 'MAPPA', 'Pierrot', 'Ufotable', 'Kyoto-Animation', 'Sunrise', 'A-1']
+        enum: ['N/A', 'Ghibli', 'Madhouse', 'Bones', 'TOEI', 'MAPPA', 'Pierrot', 'Ufotable', 'Kyoto-Animation', 'Sunrise', 'A-1'],
+        default: 'N/A'
     },
     currentEpisode: {
         type: Number,
@@ -45,7 +46,7 @@ const animeSchema = new Schema({
         type: String,
         enum: ['Yes', 'No', 'In Progress']
     },
-    comments: [commentSchema]
+    notes: [noteSchema]
 }, { timestamps: true });
     
 module.exports = mongoose.model('Anime', animeSchema);

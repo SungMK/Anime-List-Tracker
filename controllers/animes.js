@@ -30,8 +30,23 @@ async function create(req, res) {
     }
 }
 
+async function show(req, res) {
+    try {
+        const foundAnime = await Anime.findById(req.params.id);
+  
+        res.render('animes/show', {
+            anime: foundAnime,
+            title: 'See Anime Details',
+      });
+    } catch (error) {
+      console.log(error);
+      res.render('error', { title: 'Something Went Wrong' });
+    }
+}
+
 module.exports = { 
     new: newAnime,
     index,
-    create
+    create,
+    show,
 }
