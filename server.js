@@ -14,7 +14,6 @@ require ('./config/database');
 
 // Configure App Settings 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 
 // console.log(`Views directory: ${app.get('views')}`); // Add this line to log the views directory path
 
