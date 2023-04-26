@@ -2,6 +2,8 @@
 const express = require('express');
 const logger = require('morgan');
 const indexRoutes = require('./routes/index');
+const animeRoutes = require('./routes/animes');
+const noteRoutes = require('./routes/notes');
 
 // Initialize Express App
 const app = express();
@@ -20,6 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 
 // Mounted Routes
 app.use('/', indexRoutes);
+app.use('/', noteRoutes);
+app.use('/animes', animeRoutes);
 
 // tell the application to listen for requests
 app.listen(3000, () => {
