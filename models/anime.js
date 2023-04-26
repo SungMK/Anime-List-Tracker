@@ -42,8 +42,8 @@ const animeSchema = new Schema({
         min: 1917
     },
     completionStatus: {
-        type: Boolean,
-        default: false
+        type: String,
+        enum: ['Yes', 'No', 'In Progress']
     },
     comments: [commentSchema]
 }, { timestamps: true });
