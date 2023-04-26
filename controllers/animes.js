@@ -53,10 +53,21 @@ async function deleteAnime (req, res) {
     }
 } 
 
+async function updateAnime (req, res) {
+    try {
+        await Anime.findByIdAndUpdate(req.params.id);
+        res.redirect('/animes')
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Something went wrong'}); 
+    }
+} 
+
 module.exports = { 
     new: newAnime,
     index,
     create,
     show,
     delete: deleteAnime,
+    update: updateAnime,
 }
