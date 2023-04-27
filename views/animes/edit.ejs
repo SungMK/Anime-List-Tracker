@@ -3,7 +3,7 @@
 <%- include('../partials/head') %>
 <body>
 <%- include('../partials/header') %>
-<div class="content-container">
+<div class="edit-page-container">
     <form id='edit-form' method="POST" action="/animes/<%= anime._id %>?_method=PUT">
         <label>Title:
             <input type="text" name="title">
