@@ -81,7 +81,7 @@ async function updateAnime(req, res) {
         console.log(error);
         res.render('error', {title: 'Something went wrong'}); 
     }
-} 
+}  
 
 module.exports = { 
     new: newAnime,
