@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
 body {
+    /* display: grid;
+    grid-template-rows: auto 1fr auto; */
     height: 100vh;
     font-family: 'Bruno Ace', cursive;
     text-align: center;
@@ -23,7 +25,32 @@ body {
     justify-content: center;
     margin-top: 5vmin;
 }
-
+.main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 8vh); /* Subtracting the height of the navbar */
+    justify-content: space-between; /* push footer to the bottom */
+}
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+.details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* align content to the top */
+    padding: 20px; /* add some padding around the content */
+    max-width: 1200px; /* limit the maximum width */
+    margin: auto; /* center the content container */
+    width: 100%;
+}
 nav {
     display: flex;
     justify-content: space-around;
@@ -32,7 +59,7 @@ nav {
     background-color: #5D4954;
     color: white;
     width: 100%;
-    position: sticky;
+    position: relative;
     top: 0;
 }
 
@@ -42,6 +69,7 @@ nav > a {
     letter-spacing: 3px;
     font-size: 20px;
 }
+
 #new-form {
     display: flex;
     flex-direction: column;
@@ -68,6 +96,7 @@ nav > a {
     border: 1px solid #ddd;
     width: 100%;
 }
+
 
 #edit-form {
     margin-top: 10vmin;
@@ -102,9 +131,10 @@ form button:hover {
     background-color: mediumturquoise;
 }
 
-
 footer {
-    position: fixed;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin-top: auto; */
     bottom: 0;
     left: 0;
     width: 100%;
