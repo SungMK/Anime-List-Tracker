@@ -3,44 +3,45 @@
 <%- include('../partials/head') %>
 <body>
 <%- include('../partials/header') %>
-
-<form method="POST" action="/animes/<%= anime._id %>?_method=PUT">
-    <label>Title:
-        <input type="text" name="title">
-    </label><br>
-    <label>Studio:
-        <select name="studio">
-            <option value="N/A">N/A</option>
-            <option value="Ghibli">Ghibli</option>
-            <option value="Madhouse">Madhouse</option>
-            <option value="Bones">Bones</option>
-            <option value="TOEI">TOEI</option>
-            <option value="MAPPA">MAPPA</option>
-            <option value="Pierrot">Pierrot</option>
-            <option value="Ufotable">Ufotable</option>
-            <option value="Kyoto-Animation">Kyoto-Animation</option>
-            <option value="Sunrise">Sunrise</option>
-            <option value="A-1">A-1</option>
-        </select>
-    </label><br>
-    <label>Current Episode:
-        <input type="number" name="currentEpisode">
-    </label><br>
-    <label>Current Season:
-        <input type="number" name="currentSeason">
-    </label><br>
-    <label>Release Year:
-        <input type="number" name="releaseYear">
-    </label><br>
-    <label>Completion Status:
-        <select name="completionStatus">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-            <option value="In Progress">In Progress</option>
-        </select>
-    </label><br>
-    <button type="submit">Update Anime</button>
-</form>
+<div class="content-container">
+    <form id='edit-form' method="POST" action="/animes/<%= anime._id %>?_method=PUT">
+        <label>Title:
+            <input type="text" name="title">
+        </label><br>
+        <label>Studio:
+            <select name="studio">
+                <option value="N/A">N/A</option>
+                <option value="Ghibli">Ghibli</option>
+                <option value="Madhouse">Madhouse</option>
+                <option value="Bones">Bones</option>
+                <option value="TOEI">TOEI</option>
+                <option value="MAPPA">MAPPA</option>
+                <option value="Pierrot">Pierrot</option>
+                <option value="Ufotable">Ufotable</option>
+                <option value="Kyoto-Animation">Kyoto-Animation</option>
+                <option value="Sunrise">Sunrise</option>
+                <option value="A-1">A-1</option>
+            </select>
+        </label><br>
+        <label>Current Episode:
+            <input type="number" name="currentEpisode">
+        </label><br>
+        <label>Current Season:
+            <input type="number" name="currentSeason">
+        </label><br>
+        <label>Release Year:
+            <input type="number" name="releaseYear">
+        </label><br>
+        <label>Completion Status:
+            <select name="completionStatus">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="In Progress">In Progress</option>
+            </select>
+        </label><br>
+        <button type="submit">Update Anime</button>
+    </form>
+</div>
 
 <%- include('../partials/footer') %>
 </body>
