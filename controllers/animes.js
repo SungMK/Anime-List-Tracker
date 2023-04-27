@@ -6,6 +6,19 @@ function newAnime(req, res) {
     });
 }
 
+async function editAnime (req, res) {
+    try {
+        const foundAnime = await Anime.findById(req.params.id);
+        res.render('animes/edit', {
+             anime: foundAnime,
+             title: 'Update Anime'
+    });
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Something Went Wrong'});
+    }
+}
+
 async function index(req, res) {
     try {
         const allAnimes = await Anime.find({});
@@ -85,6 +98,7 @@ async function updateAnime(req, res) {
 
 module.exports = { 
     new: newAnime,
+    edit: editAnime,
     index,
     create,
     show,
