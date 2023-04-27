@@ -4,8 +4,7 @@
 <body>
 <%- include('../partials/header') %>
 
-<form action="/animes/<%= anime._id %>" method="POST">
-    <input type="hidden" name="_method" value="PUT">
+<form method="POST" action="/animes/<%= anime._id %>?_method=PUT">
     <label>Title:
         <input type="text" name="title">
     </label><br>
@@ -42,7 +41,7 @@
     </label><br>
     <button type="submit">Update Anime</button>
 </form>
+
 <%- include('../partials/footer') %>
 </body>
 </html>
-

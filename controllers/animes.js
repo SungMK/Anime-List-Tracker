@@ -67,6 +67,16 @@ async function updateAnime(req, res) {
             await Anime.findByIdAndUpdate(req.params.id, req.body);
             res.redirect('/animes');
         }
+        await Anime.findByIdAndUpdate(req.params.id, {
+            title: req.body.title,
+            studio: req.body.studio,
+            currentEpisode: req.body.currentEpisode,
+            currentSeason: req.body.currentSeason,
+            releaseYear: req.body.releaseYear,
+            completionStatus: req.body.completionStatus
+        });
+        console.log('What is happening?');
+        res.redirect('/animes')
     } catch (error) {
         console.log(error);
         res.render('error', {title: 'Something went wrong'}); 
