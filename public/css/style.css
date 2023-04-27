@@ -33,9 +33,6 @@ nav {
     top: 0;
 }
 
-a {
-    color: aqua;
-}
 nav > a {
     color: white;
     text-decoration: none;
