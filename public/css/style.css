@@ -50,5 +50,27 @@ footer {
 }
 
 .delete-button {
-    color: red;
+    color: white;
+    background-color: red;
+    border-radius: 4vmin;
+    border-color: silver;
+}
+
+button:hover {
+    background-color: rgb(228, 38, 38);
+    color: black;
+}
+
+#index-table {
+    display: grid;
+    justify-content: center;
+    padding-top: 10vmin;
+}
+
+#details-column, #edit-column, #delete-column {
+    padding-right: 15px;
+}
+
+#details-column {
+    padding-left: 15px;
 }
