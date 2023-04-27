@@ -53,10 +53,20 @@ async function deleteAnime (req, res) {
     }
 } 
 
-async function updateAnime (req, res) {
+async function updateAnime(req, res) {
     try {
-        await Anime.findByIdAndUpdate(req.params.id);
-        res.redirect('/animes')
+        console.log('updateAnime function called');
+        if (req.method === 'GET') {
+            const foundAnime = await Anime.findById(req.params.id);
+
+            res.render('animes/edit', {
+                anime: foundAnime,
+                title: 'Edit Anime',
+            });
+        } else if (req.method === 'PUT') {
+            await Anime.findByIdAndUpdate(req.params.id, req.body);
+            res.redirect('/animes');
+        }
     } catch (error) {
         console.log(error);
         res.render('error', {title: 'Something went wrong'}); 
