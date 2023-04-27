@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
 body {
-    /* display: grid;
-    grid-template-rows: auto 1fr auto; */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
     font-family: 'Bruno Ace', cursive;
     text-align: center;
@@ -25,12 +25,14 @@ body {
     justify-content: center;
     margin-top: 5vmin;
 }
+
 .main-content {
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 8vh); /* Subtracting the height of the navbar */
     justify-content: space-between; /* push footer to the bottom */
 }
+
 .notes-container {
     display: flex;
     flex-direction: column;
@@ -41,6 +43,7 @@ body {
     margin: auto;
     width: 100%;
 }
+
 .details-container{
     display: flex;
     flex-direction: column;
@@ -51,6 +54,37 @@ body {
     margin: auto; /* center the content container */
     width: 100%;
 }
+
+.details-table, .notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.details-table th, .details-table td, .notes-table th, .notes-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.details-table th, .notes-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.details-table tr:nth-child(even), .notes-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.details-table tr:hover, .notes-table tr:hover {
+    background-color: #ddd;
+}
+
+#notes-content, #notes-rating {
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
