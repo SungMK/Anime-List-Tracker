@@ -17,4 +17,10 @@ router.get('/:id', animesController.show);
 // DELETE /Animes
 router.delete('/:id', animesController.delete);
 
+// GET /Animes/edit - Edit Route
+router.get('/edit/:id', animesController.edit)
+
+// Update /Animes
+router.put('/:id', animesController.update);
+
 module.exports = router;
