@@ -90,7 +90,6 @@ form button:hover {
     background-color: mediumturquoise;
 }
 
-
 footer {
     position: fixed;
     bottom: 0;
@@ -110,4 +109,14 @@ h2 {
 nav > a:hover {
     color: aqua;
     transition: color 0.3s ease;
+}
+
+.name-one {
+    padding-right: 15vmin;
+}
+
+#anime-notes-table {
+    display: grid;
+    justify-content: center;
+    text-align: center;
 }

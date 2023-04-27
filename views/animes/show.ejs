@@ -7,7 +7,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th class="name-one">Name</th>
                     <th>Studio</th>
                     <th>Current Episode</th>
                     <th>Current Season</th>
@@ -18,7 +18,7 @@
                 <tbody>
                     <% anime %>
                         <tr>
-                            <td><%= anime.title %></td>
+                            <td class="name-one"><%= anime.title %></td>
                             <td><%= anime.studio %></td>
                             <td><%= anime.currentEpisode %></td>
                             <td><%= anime.currentSeason %></td>
@@ -29,7 +29,7 @@
         </table>
     </section>
     <br>
-    <section>
+    <section id="anime-notes-table">
         <h2>My Notes</h2>
             <table>
                 <thead>
@@ -43,6 +43,9 @@
                         <tr>
                             <td id="notes-content"><%= n.content %></td>
                             <td id="notes-rating"><%= n.rating %></td>
+                            <td>
+                                <a href="/animes/edit/">EDIT</a>
+                            </td>
                             <td>
                                 <form method="POST" action="/animes/<%= anime._id %>/notes/<%= n._id %>?_method=DELETE">
                                     <button class="delete-button" type="submit">DELETE</button>
