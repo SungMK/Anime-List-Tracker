@@ -66,8 +66,20 @@ async function deleteAnime (req, res) {
     }
 } 
 
-async function updateAnime (req, res) {
+async function updateAnime(req, res) {
     try {
+        console.log('updateAnime function called');
+        if (req.method === 'GET') {
+            const foundAnime = await Anime.findById(req.params.id);
+
+            res.render('animes/edit', {
+                anime: foundAnime,
+                title: 'Edit Anime',
+            });
+        } else if (req.method === 'PUT') {
+            await Anime.findByIdAndUpdate(req.params.id, req.body);
+            res.redirect('/animes');
+        }
         await Anime.findByIdAndUpdate(req.params.id, {
             title: req.body.title,
             studio: req.body.studio,

@@ -16,6 +16,8 @@ require ('./config/database');
 // Configure App Settings 
 app.set('view engine', 'ejs');
 
+// console.log(`Views directory: ${app.get('views')}`); // Add this line to log the views directory path
+
 // Middleware 
 app.use(logger('dev'));
 app.use(express.static('public'));
