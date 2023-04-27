@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bruno Ace', cursive;
     text-align: center;
     background-color: #f4f4f4;
     margin: 0;
@@ -37,6 +39,57 @@ nav > a {
     letter-spacing: 3px;
     font-size: 20px;
 }
+#new-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+}
+
+#new-form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#new-form input, #new-form select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+#delete-button-content {
+    padding: 10px 20px;
+    background-color: #5D4954;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #5D4954;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: mediumturquoise;
+}
+
 
 footer {
     position: fixed;
