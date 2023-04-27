@@ -6,7 +6,7 @@ body {
     height: 100vh;
     font-family: 'Bruno Ace', cursive;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: whitesmoke;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,6 +33,9 @@ nav {
     top: 0;
 }
 
+a {
+    color: aqua;
+}
 nav > a {
     color: white;
     text-decoration: none;
@@ -108,6 +111,6 @@ h2 {
 
 /* Add some hover effects for the navigation links */
 nav > a:hover {
-    color: #50fa7b;
+    color: aqua;
     transition: color 0.3s ease;
 }
