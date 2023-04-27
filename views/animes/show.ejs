@@ -43,6 +43,11 @@
                         <tr>
                             <td id="notes-content"><%= n.content %></td>
                             <td id="notes-rating"><%= n.rating %></td>
+                            <td>
+                                <form method="POST" action="/animes/<%= anime._id %>/notes/<%= n._id %>?_method=DELETE">
+                                    <button class="delete-button" type="submit">DELETE</button>
+                                </form>
+                            </td>
                         </tr>
                     <% }) %>
                 </tbody>

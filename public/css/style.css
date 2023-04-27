@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 8vh); /* Subtracting the height of the navbar */
+    /* height: calc(100vh - 8vh); Subtracting the height of the navbar */
     width: 100%;
 }
 
@@ -29,7 +29,7 @@ nav {
     background-color: #5D4954;
     color: white;
     width: 100%;
-    position: sticky;
+    position: relative;
     top: 0;
 }
 

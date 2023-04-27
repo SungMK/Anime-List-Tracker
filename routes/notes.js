@@ -4,6 +4,6 @@ const notesController = require('../controllers/notes');
 
 router.post('/animes/:id/notes', notesController.create);
 
-// router.delete('/animes/:id/', notesController.delete);
+router.delete('/animes/:animeId/notes/noteId', notesController.delete);
 
 module.exports = router;

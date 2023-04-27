@@ -17,7 +17,6 @@ router.get('/:id', animesController.show);
 // POST /Animes - Create Anime
 router.post('/', animesController.create);
 
-
 // DELETE /Animes
 router.delete('/:id', animesController.delete);
 
