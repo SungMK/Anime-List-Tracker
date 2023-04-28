@@ -218,6 +218,9 @@ footer {
 
 h2 {
     color: whitesmoke;
+    font-weight: bolder;
+    font-size: 5vmin;
+    color: #66fcf1;
 }
 
 /* Add some hover effects for the navigation links */
