@@ -22,9 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', indexRoutes);
 
 // tell the application to listen for requests
-app.listen(3000, () => {
-    console.log('express is listening on port:3000');
-});
+app.listen(process.env.PORT || 4000);
 
 // app.use('*', (req, res) => {
 //     res.render('404', {title: '404 - Page Not Found'});
