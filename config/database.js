@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // connect to the database
-mongoose.connect(process.env.DATABASE_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 // set up a special listener
 // to listen for "connected" to mongoDB event
