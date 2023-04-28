@@ -62,7 +62,7 @@ body {
 }
 
 .details-table th, .details-table td, .notes-table th, .notes-table td {
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     padding: 10px;
     text-align: left;
 }
@@ -74,10 +74,6 @@ body {
 
 .details-table tr:nth-child(even), .notes-table tr:nth-child(even) {
     background-color: #f2f2f2;
-}
-
-.details-table tr:hover, .notes-table tr:hover {
-    background-color: #ddd;
 }
 
 #notes-content, #notes-rating {
@@ -123,6 +119,7 @@ nav > a {
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-size: 2vmin;
 }
 
 #new-form input, #new-form select {
@@ -130,6 +127,7 @@ nav > a {
     border-radius: 4px;
     border: 1px solid #ddd;
     width: 100%;
+    text-align: center;
     font-size: 1.5vmin;
 }
 
@@ -167,9 +165,9 @@ form button:hover {
 }
 
 footer {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* margin-top: auto; */
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -195,4 +193,19 @@ nav > a:hover {
     width: 100%;
     left: 0;
     bottom: 0;
+}
+/* Difference in code below 👇 */
+
+.name-one {
+    padding-right: 15vmin;
+}
+
+#anime-notes-table {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+#notes-delete-button {
+    border: none;
 }
