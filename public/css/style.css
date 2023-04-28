@@ -62,7 +62,7 @@ body {
 }
 
 .details-table th, .details-table td, .notes-table th, .notes-table td {
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     padding: 10px;
     text-align: left;
 }
@@ -74,10 +74,6 @@ body {
 
 .details-table tr:nth-child(even), .notes-table tr:nth-child(even) {
     background-color: #f2f2f2;
-}
-
-.details-table tr:hover, .notes-table tr:hover {
-    background-color: #ddd;
 }
 
 #notes-content, #notes-rating {
@@ -122,6 +118,7 @@ nav > a {
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-size: 2vmin;
 }
 
 #new-form input, #new-form select {
@@ -130,6 +127,7 @@ nav > a {
     border: 1px solid #ddd;
     width: 100%;
     text-align: center;
+    font-size: 1.5vmin;
 }
 
 #edit-form {
@@ -198,4 +196,8 @@ nav > a:hover {
     display: grid;
     justify-content: center;
     text-align: center;
+}
+
+#notes-delete-button {
+    border: none;
 }
