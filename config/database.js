@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
 
-// connect to the database
+// Database Connection
 mongoose.connect(process.env.MONGODB_URI);
 
-// set up a special listener
-// to listen for "connected" to mongoDB event
-
-// setup a shortcut variable to the connection object
+// Shortcut variable to the Connection Object
 const db = mongoose.connection;
 
-// register a listener for connected events
+// Listener for Connected Events
 db.on('connected', function() {
     console.log(`Connected to MongoDB ${db.name} on ${db.host} port: ${db.port}`);
 });

@@ -292,3 +292,13 @@ form button:hover {
 #thoughts-header {
     text-align: center;
 }
+
+#error-page {
+    justify-content: center;
+    margin-top: 5vmin;
+}
+
+#error-404-page {
+    justify-content: center;
+    margin-top: 5vmin;
+}
