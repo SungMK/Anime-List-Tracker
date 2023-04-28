@@ -23,6 +23,8 @@ Anidex is an anime progress tracking app that allows you to keep track of and ma
 
 Getting started is super simple! Just click the link below:
 
+https://anidex-app.herokuapp.com/
+
 <br>
 
 # Using the App
