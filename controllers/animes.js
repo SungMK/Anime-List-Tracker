@@ -1,9 +1,14 @@
 const Anime = require('../models/anime');
 
-function newAnime(req, res) {
-    res.render('animes/new', {
-        title: 'Enter a New Anime'
-    });
+async function newAnime(req, res) {
+    try {
+        res.render('animes/new', {
+            title: 'Enter a New Anime'
+        });
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Something Went Wrong'});
+    }
 }
 
 async function editAnime (req, res) {

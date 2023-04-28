@@ -16,14 +16,11 @@ require ('./config/database');
 // Configure App Settings 
 app.set('view engine', 'ejs');
 
-// console.log(`Views directory: ${app.get('views')}`); // Add this line to log the views directory path
-
 // Middleware 
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-
 
 // Mounted Routes
 app.use('/', indexRoutes);
@@ -35,6 +32,6 @@ app.listen(3000, () => {
     console.log('express is listening on port:3000');
 });
 
-// app.use('*', (req, res) => {
-//     res.render('404', {title: '404 - Page Not Found'});
-// });
+app.use('*', (req, res) => {
+    res.render('404', {title: '404 - Page Not Found'});
+});
