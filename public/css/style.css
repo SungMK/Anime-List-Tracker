@@ -288,3 +288,17 @@ form button:hover {
 #index-delete-td, #index-edit-td, #index-details-td{
     border: none;
 }
+
+#thoughts-header {
+    text-align: center;
+}
+
+#error-page {
+    justify-content: center;
+    margin-top: 5vmin;
+}
+
+#error-404-page {
+    justify-content: center;
+    margin-top: 5vmin;
+}

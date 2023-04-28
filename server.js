@@ -27,8 +27,8 @@ app.use('/', indexRoutes);
 app.use('/', noteRoutes);
 app.use('/animes', animeRoutes);
 
-// tell the application to listen for requests
-app.listen(process.env.PORT || 4000);
+// Listening Port
+app.listen(process.env.PORT);
 
 app.use('*', (req, res) => {
     res.render('404', {title: '404 - Page Not Found'});
