@@ -1,9 +1,14 @@
 const Anime = require('../models/anime');
 
-function newAnime(req, res) {
-    res.render('animes/new', {
-        title: 'Enter a New Anime'
-    });
+async function newAnime(req, res) {
+    try {
+        res.render('animes/new', {
+            title: 'Enter a New Anime'
+        });
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Something Went Wrong'});
+    }
 }
 
 async function editAnime (req, res) {
@@ -68,18 +73,6 @@ async function deleteAnime (req, res) {
 
 async function updateAnime(req, res) {
     try {
-        console.log('updateAnime function called');
-        if (req.method === 'GET') {
-            const foundAnime = await Anime.findById(req.params.id);
-
-            res.render('animes/edit', {
-                anime: foundAnime,
-                title: 'Edit Anime',
-            });
-        } else if (req.method === 'PUT') {
-            await Anime.findByIdAndUpdate(req.params.id, req.body);
-            res.redirect('/animes');
-        }
         await Anime.findByIdAndUpdate(req.params.id, {
             title: req.body.title,
             studio: req.body.studio,
@@ -88,13 +81,12 @@ async function updateAnime(req, res) {
             releaseYear: req.body.releaseYear,
             completionStatus: req.body.completionStatus
         });
-        console.log('What is happening?');
         res.redirect('/animes')
     } catch (error) {
         console.log(error);
         res.render('error', {title: 'Something went wrong'}); 
     }
-} 
+}  
 
 module.exports = { 
     new: newAnime,
