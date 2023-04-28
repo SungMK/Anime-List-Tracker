@@ -1,22 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
-@font-face {
-    font-family: 'NinjaNaruto';
-    src: url('../fonts/NinjaNaruto-YOn4.ttf');
-}
-@font-face {
-    font-family: 'One Piece';
-    src: url('../fonts/OnePiece-zAqL.ttf');
-}
-@font-face {
-    font-family: 'Moon Kids';
-    src: url('../fonts/MoonkidsPersonalUseExtbd-gxPZ3.ttf');
-}
-
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     text-align: center;
     background-color: whitesmoke;
     margin: auto;
@@ -89,6 +75,7 @@ body {
 .details-table th, .details-table td {
     border: 2px solid #ddd;
     padding: 10px;
+    
     text-align: center;
 }
 .notes-table td {
@@ -97,6 +84,7 @@ body {
     text-align: left;
     color: white;  /* change the color of table data to */
 }
+
 .notes-table th{
     border: 2px solid #ddd;
     padding: 10px;
@@ -105,7 +93,7 @@ body {
 }
 
 .details-table th, .notes-table th {
-    background-color: #f2f2f2;
+    background-color: #c5c6c7;
 }
 
 .details-table tr:nth-child(even), .notes-table tr:nth-child(even) {
@@ -218,6 +206,9 @@ footer {
 
 h2 {
     color: whitesmoke;
+    font-weight: bolder;
+    font-size: 5vmin;
+    color: #66fcf1;
 }
 
 /* Add some hover effects for the navigation links */
@@ -232,7 +223,6 @@ nav > a:hover {
     left: 0;
     bottom: 0;
 }
-/* Difference in code below 👇 */
 
 .name-one {
     padding-right: 15vmin;
@@ -251,9 +241,11 @@ nav > a:hover {
 .notes-label {
     color: white;
 }
+
 #delete-button-content:hover {
     background-color: red;
 }
+
 form button, #delete-button-content {
     padding: 10px 20px;
     background-color: #1f2833;
@@ -275,6 +267,7 @@ form button:hover {
 #index-info{
     color: whitesmoke;
     margin-bottom: 0;
+    font-weight: bold;
 }
 
 .general-delete-button:hover {
@@ -282,7 +275,7 @@ form button:hover {
 }
 
 #footer-p {
-    color:#66fcf1
+    color:#66fcf1;
 }
 
 #index-delete-td, #index-edit-td, #index-details-td{
