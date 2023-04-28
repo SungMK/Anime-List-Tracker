@@ -1,54 +1,290 @@
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 0;
+}
+
+#index-body {
+    background-color: #0b0c10;
+}
+
+.content-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.index-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vmin;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 8vh); /* Subtracting the height of the navbar */
+    justify-content: space-between; /* push footer to the bottom */
+}
+.main-details-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 8vh); /* Subtracting the height of the navbar */
+    justify-content: space-between; /* push footer to the bottom */
+    position: absolute;
+    top: 50;
+    transform: translateY(-50%);
+}
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* align content to the top */
+    padding: 20px; /* add some padding around the content */
+    max-width: 1200px; /* limit the maximum width */
+    margin: auto; /* center the content container */
+    width: 100%;
+}
+
+.details-table, .notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.details-table th, .details-table td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    
+    text-align: center;
+}
+.notes-table td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: white;  /* change the color of table data to */
+}
+
+.notes-table th{
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: black;  /* change the color of table data to */
+}
+
+.details-table th, .notes-table th {
+    background-color: #c5c6c7;
+}
+
+.details-table tr:nth-child(even), .notes-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#notes-content, #notes-rating {
+    max-width: 300px;
+    word-wrap: break-word;
+    color:black;
     text-align: center;
 }
 
 nav {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #1f2833;
+    color: white;
+    width: 100%;
+    position: relative;
+    top: 0;
+    font-weight: bold;
 }
 
 nav > a {
-    margin-right: 1rem;
+    color: #66fcf1;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+#new-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    font-size: 2vmin;
+}
+
+#new-form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2vmin;
+}
+
+#new-form input, #new-form select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vmin;
+}
+
+#edit-form {
+    margin-top: 10vmin;
+    font-size: 2vmin;
+}
+
+.edit-page-container {
+    font-size: 5vmin;
+}
+
+#delete-button-content {
+    padding: 10px 20px;
+    background-color: #1f2833;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #5D4954;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: mediumturquoise;
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
     margin-top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f2833;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 5vmin;
+    color: #66fcf1;
+    font-weight: bolder;
+    font-size: 5vmin;
+    color: #66fcf1;
+}
+
+h2 {
+    color: #0b0c10;
+}
+
+/* Add some hover effects for the navigation links */
+nav > a:hover {
+    color: white;
+}
+
+.carousel-caption {
+    background: rgba(128, 128, 128, 0.75); /* Semi-transparent gray background */
+    padding: 10px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.name-one {
+    padding-right: 15vmin;
+}
+
+#anime-notes-table {
+    display: grid;
+    justify-content: center;
     text-align: center;
 }
 
-.delete-button {
-    display: inline-block;
-    margin-right: 10px;
+#notes-delete-button {
+    border: none;
 }
 
-.delete-button-content {
+.notes-label {
+    color: white;
 }
 
-.delete-button-rating {
+#delete-button-content:hover {
+    background-color: red;
 }
 
-#thoughts-header {
-    color: red;
+form button, #delete-button-content {
+    padding: 10px 20px;
+    background-color: #1f2833;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#rating-header {
-    color: purple;
+form button:hover {
+    background-color: mediumturquoise;
 }
 
-#notes-content {
-    color: blue;
+#delete-button-content:hover {
+    background-color: red;
 }
 
-#notes-rating {
-    color: orangered;
-    text-align: center;
+#index-info{
+    color: whitesmoke;
+    margin-bottom: 0;
+    font-weight: bold;
 }
 
-.delete-button {
-    color: red;
+.general-delete-button:hover {
+    background-color: red;
+}
+
+#footer-p {
+    color:#66fcf1;
+}
+
+#index-delete-td, #index-edit-td, #index-details-td{
+    border: none;
 }

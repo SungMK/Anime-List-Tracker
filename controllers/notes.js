@@ -12,21 +12,23 @@ async function create (req, res) {
     }
 }
 
-// async function deleteNote (req, res) {
-//     try {
-//         const foundAnime = await Anime.findById(req.params.id);
-//         const noteIndex = foundAnime.notes.findIndex(note => note.id === req.params.noteId);
-//         if (noteIndex !== -1) {
-//             foundAnime.notes.splice(noteIndex, 1);
-//             await foundAnime.save();
-//         } 
-//         res.redirect(`/animes/${foundAnime._id}`);
-//     } catch (error) {
-//         console.log(error);
-//         res.render('error', {title: 'Something went wrong'}); 
-//     }
-// }
+async function deleteNote (req, res) {
+    try {
+        const anime = await Anime.findById(req.params.animeId);
+        anime.notes.forEach((n, i) => {
+            if(n._id == req.params.noteId) {
+                anime.notes.splice(i, 1)
+            }
+        })
+        await anime.save();
+        res.redirect(`/animes/${req.params.animeId}`);
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Something went wrong'}); 
+    }
+} 
 
 module.exports = {
     create,
+    delete: deleteNote,
 };

@@ -32,6 +32,6 @@ app.listen(3000, () => {
     console.log('express is listening on port:3000');
 });
 
-// app.use('*', (req, res) => {
-//     res.render('404', {title: '404 - Page Not Found'});
-// });
+app.use('*', (req, res) => {
+    res.render('404', {title: '404 - Page Not Found'});
+});
