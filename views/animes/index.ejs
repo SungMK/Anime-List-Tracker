@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head') %>
+<body>
+    <%- include ('../partials/header') %>
+    <div class="content-container">
+        <div class="main-index-content">
+            <section>
+                <table class="details-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Completion Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% animes.forEach(a => { %>  
+                            <tr>
+                                <td><%= a.title %></td>
+                                <td><%= a.completionStatus %></td>
+                                <td id="index-details-td">
+                                    <a href="/animes/<%= a.id %>">DETAILS</a>
+                                </td>
+                                <td id="index-edit-td">
+                                    <a href="/animes/edit/<%= a.id %>">EDIT</a>
+                                </td>
+                                <td id="index-delete-td"> 
+                                    <form method="POST" action="/animes/<%= a._id %>?_method=DELETE">
+                                        <button class="general-delete-button" type="submit">DELETE</button>
+                                    </form>
+                                </td>      
+                            </tr>
+                        <% }) %>        
+                    </tbody>
+                </table>    
+            </section>
+        </div>
+    </div>
+    <%- include ('../partials/footer') %>
+</body>
+</html>
