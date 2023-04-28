@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@font-face {
+    font-family: 'NinjaNaruto';
+    src: url('../fonts/NinjaNaruto-YOn4.ttf');
+}
+@font-face {
+    font-family: 'One Piece';
+    src: url('../fonts/OnePiece-zAqL.ttf');
+}
+@font-face {
+    font-family: 'Moon Kids';
+    src: url('../fonts/MoonkidsPersonalUseExtbd-gxPZ3.ttf');
+}
 
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
-    font-family: 'Bruno Ace', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: whitesmoke;
     margin: auto;
     padding: 0;
+}
+
+#index-body {
+    background-color: #0b0c10;
 }
 
 .content-container {
@@ -31,6 +47,15 @@ body {
     flex-direction: column;
     min-height: calc(100vh - 8vh); /* Subtracting the height of the navbar */
     justify-content: space-between; /* push footer to the bottom */
+}
+.main-details-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 8vh); /* Subtracting the height of the navbar */
+    justify-content: space-between; /* push footer to the bottom */
+    position: absolute;
+    top: 50;
+    transform: translateY(-50%);
 }
 
 .notes-container {
@@ -61,15 +86,26 @@ body {
     margin: 20px 0;
 }
 
-.details-table th, .details-table td, .notes-table th, .notes-table td {
+.details-table th, .details-table td {
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.notes-table td {
     border: 2px solid #ddd;
     padding: 10px;
     text-align: left;
+    color: white;  /* change the color of table data to */
+}
+.notes-table th{
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: black;  /* change the color of table data to */
 }
 
 .details-table th, .notes-table th {
     background-color: #f2f2f2;
-    color: #333;
 }
 
 .details-table tr:nth-child(even), .notes-table tr:nth-child(even) {
@@ -79,6 +115,8 @@ body {
 #notes-content, #notes-rating {
     max-width: 300px;
     word-wrap: break-word;
+    color:black;
+    text-align: center;
 }
 
 nav {
@@ -86,15 +124,16 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: #5D4954;
+    background-color: #1f2833;
     color: white;
     width: 100%;
     position: relative;
     top: 0;
+    font-weight: bold;
 }
 
 nav > a {
-    color: white;
+    color: #66fcf1;
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 20px;
@@ -142,7 +181,7 @@ nav > a {
 
 #delete-button-content {
     padding: 10px 20px;
-    background-color: #5D4954;
+    background-color: #1f2833;
     color: white;
     border: none;
     border-radius: 4px;
@@ -171,24 +210,23 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #5D4954;
+    background-color: #1f2833;
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 
 h2 {
-    color: #333;
+    color: whitesmoke;
 }
 
 /* Add some hover effects for the navigation links */
 nav > a:hover {
-    color: aqua;
-    transition: color 0.3s ease;
+    color: white;
 }
 
 .carousel-caption {
-    background: rgba(128, 128, 128, 0.90); /* Semi-transparent gray background */
+    background: rgba(128, 128, 128, 0.75); /* Semi-transparent gray background */
     padding: 10px;
     width: 100%;
     left: 0;
@@ -207,5 +245,46 @@ nav > a:hover {
 }
 
 #notes-delete-button {
+    border: none;
+}
+
+.notes-label {
+    color: white;
+}
+#delete-button-content:hover {
+    background-color: red;
+}
+form button, #delete-button-content {
+    padding: 10px 20px;
+    background-color: #1f2833;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: mediumturquoise;
+}
+
+#delete-button-content:hover {
+    background-color: red;
+}
+
+#index-info{
+    color: whitesmoke;
+    margin-bottom: 0;
+}
+
+.general-delete-button:hover {
+    background-color: red;
+}
+
+#footer-p {
+    color:#66fcf1
+}
+
+#index-delete-td, #index-edit-td, #index-details-td{
     border: none;
 }
