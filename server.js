@@ -24,6 +24,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
+
 // Mounted Routes
 app.use('/', indexRoutes);
 app.use('/', noteRoutes);

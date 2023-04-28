@@ -116,6 +116,7 @@ nav > a {
     border-radius: 8px;
     max-width: 500px;
     width: 100%;
+    font-size: 2vmin;
 }
 
 #new-form label {
@@ -129,6 +130,7 @@ nav > a {
     border-radius: 4px;
     border: 1px solid #ddd;
     width: 100%;
+    font-size: 1.5vmin;
 }
 
 #edit-form {
@@ -185,4 +187,12 @@ h2 {
 nav > a:hover {
     color: aqua;
     transition: color 0.3s ease;
+}
+
+.carousel-caption {
+    background: rgba(128, 128, 128, 0.90); /* Semi-transparent gray background */
+    padding: 10px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }
