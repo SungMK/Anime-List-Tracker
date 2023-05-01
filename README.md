@@ -27,7 +27,7 @@ https://anidex-app.herokuapp.com/
 
 View our Trello Board:
 
-https://trello.com/b/sQKrUiYF/project-2
+https://trello.com/invite/b/sQKrUiYF/ATTI82d312f711e7ab9deed0018f49aad3ca877B34CC/project-2
 
 <br>
 
