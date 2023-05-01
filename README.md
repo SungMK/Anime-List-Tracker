@@ -25,6 +25,10 @@ Getting started is super simple! Just click the link below:
 
 https://anidex-app.herokuapp.com/
 
+View our Trello Board:
+
+https://trello.com/b/sQKrUiYF/project-2
+
 <br>
 
 # Using the App
